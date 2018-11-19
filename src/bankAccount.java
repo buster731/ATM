@@ -49,6 +49,9 @@ public class bankAccount{
 		if(withdrawVal < -1) {
 			return 0;
 		}
+		else if(withdrawVal > balance) {
+			return -1;
+		}
 		else {
 			this.balance = balance - withdrawVal;
 			return 1;
